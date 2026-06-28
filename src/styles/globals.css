@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-dark antialiased;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  /* Constrained, readable measure for long-form article copy. */
+  .prose-copy p {
+    @apply text-lg leading-relaxed text-dark/80;
+  }
+  .prose-copy p + p {
+    @apply mt-5;
+  }
+}
